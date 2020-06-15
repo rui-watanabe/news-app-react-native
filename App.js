@@ -14,10 +14,10 @@ export default function App() {
           />
         </View>
         <View style={styles.rightContainer}>
-          <Text numberOfLines={3}>
+          <Text tyle={styles.subText} numberOfLines={3}>
             test
           </Text>
-          <Text>ReactNews</Text>
+          <Text style={styles.subText}>ReactNews</Text>
         </View>
       </View>
     </View>
@@ -42,6 +42,15 @@ const styles = StyleSheet.create({
     width: 100
   },
   rightContainer: {
-    flex: 1
+    flex: 1,
+    padding: 10,
+    justifyContent: "space-between"
+  },
+  text: {
+    fontSize: 16
+  },
+  subText: {
+    fontSize: 10,
+    color: "gray"
   }
 });
