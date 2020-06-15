@@ -13,7 +13,12 @@ export default function App() {
             }}
           />
         </View>
-        <View style={styles.rightContainer}></View>
+        <View style={styles.rightContainer}>
+          <Text numberOfLines={3}>
+            test
+          </Text>
+          <Text>ReactNews</Text>
+        </View>
       </View>
     </View>
   );
@@ -34,11 +39,9 @@ const styles = StyleSheet.create({
     flexDirection: "row"
   },
   leftContainer: {
-    backgroundColor: 'red',
     width: 100
   },
   rightContainer: {
-    backgroundColor: 'blue',
     flex: 1
   }
 });
