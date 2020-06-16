@@ -1,15 +1,22 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import ListItem from './components/ListItem';
+import articles from './dummies/articles.json';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
+  const items = articles.map((article, index) => {
+    return(
       <ListItem 
-        author="SampleNews"
-        title="test"
-        imageUrl="https://picsum.photos/id/10/200/200"
+        author={ article.author }
+        title={ article.title }
+        imageUrl={ article.urlToImage }
+        key = { index }
       />
+    )
+  })
+  return (
+    <View style={ styles.container }>
+      { items }
     </View>
   );
 }
