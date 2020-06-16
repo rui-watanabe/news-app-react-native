@@ -25,7 +25,7 @@ const ListItem = ({ imageUrl, title, author }) => {
 const styles = StyleSheet.create({
   itemContainer: {
     height: 100,
-    width: '95%',
+    width: '100%',
     borderColor: 'gray',
     borderWidth: 1,
     flexDirection: "row"
