@@ -2,15 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { StyleSheet, View , FlatList, SafeAreaView } from 'react-native';
 import ListItem from './components/ListItem';
 import dummyArticles from './dummies/articles.json';
+import Constants from 'expo-constants';
 
 export default function App() {
   const [articles, setArticles] = useState([]);
   useEffect(() => {
+    alert(Constants.manifest.extra.newsApiKey)
     const timer = setTimeout(() => {
       setArticles(dummyArticles)
     }, 2000);
     return () => clearTimeout(timer);
-  }, [])
+  }, []);
+
   return (
     <SafeAreaView style={ styles.container }>
       <FlatList
