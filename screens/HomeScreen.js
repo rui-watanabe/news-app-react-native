@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, View , FlatList, SafeAreaView } from 'react-native';
-import ListItem from './components/ListItem';
-import dummyArticles from './dummies/articles.json';
+import ListItem from '../components/ListItem';
 import Constants from 'expo-constants';
 import axios from 'axios';
 
 const URL = `http://newsapi.org/v2/top-headlines?country=jp&apiKey=${Constants.manifest.extra.newsApiKey}`;
 
-export default function App() {
+export default HomeScreen () => {
   const [articles, setArticles] = useState([]);
   useEffect(() => {
    fetchArticles();    
