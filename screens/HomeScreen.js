@@ -4,7 +4,7 @@ import ListItem from '../components/ListItem';
 import Constants from 'expo-constants';
 import axios from 'axios';
 
-const URL = `http://newsapi.org/v2/top-headlines?country=jp&apiKey=${Constants.manifest.extra.newsApiKey}`;
+const URL = `http://newsapi.org/v2/top-headlines?country=jp&apiKey=${ Constants.manifest.extra.newsApiKey }`;
 
 export default HomeScreen = ({ navigation }) => {
   const [articles, setArticles] = useState([]);
@@ -24,13 +24,13 @@ export default HomeScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={ styles.container }>
       <FlatList
-        data={ articles}
+        data={ articles }
         renderItem={({ item }) => (
           <ListItem
             author={ item.author }
             title={ item.title }
             imageUrl={ item.urlToImage }
-            onPress={() => navigation.navigate("Article")}
+            onPress={() => navigation.navigate("Article", { url: item.url })}
           />
         )}
         keyExtractor={(item, index) => index.toString()}
