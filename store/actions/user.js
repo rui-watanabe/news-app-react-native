@@ -9,5 +9,5 @@ export const deleteClip = ({ clip }) => {
   return {
     type: "DELETE_CLIP",
     clip
-  }
-}
+  };
+};
