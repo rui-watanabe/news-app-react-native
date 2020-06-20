@@ -40,7 +40,7 @@ const ScreenOption = ({ route }) => ({
   } 
 })
 
-export default AppNavigator = () => {
+const AppNavigator = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator screenOptions={ ScreenOption }>
@@ -50,3 +50,5 @@ export default AppNavigator = () => {
     </NavigationContainer> 
   );
 };
+
+export default AppNavigator;

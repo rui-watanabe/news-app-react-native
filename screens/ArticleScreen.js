@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   }
 });
 
-export default ArticleScreen = ({ route }) => {
+const ArticleScreen = ({ route }) => {
   const { article } = route.params;
   const dispatch = useDispatch();
   const user = useSelector(state => state.user);
@@ -37,3 +37,5 @@ export default ArticleScreen = ({ route }) => {
     </SafeAreaView>
   )
 }
+
+export default ArticleScreen;
