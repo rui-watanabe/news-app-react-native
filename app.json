@@ -2,6 +2,8 @@
   "expo": {
     "name": "news-app",
     "slug": "news-app",
+    "privacy": "public",
+    "sdkVersion": "35.0.0",
     "platforms": [
       "ios",
       "android",
@@ -22,7 +24,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "bundleIdentifier": "com.rui-watanabe-expo.news-app"
     },
     "extra": {
       "newsApiKey": "eafb135515bf4e9ca0cd3c510585db3c"
