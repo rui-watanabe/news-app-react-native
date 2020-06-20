@@ -4,7 +4,7 @@ const initialState = {
 
 const userReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'ADD_ClIP':
+    case 'ADD_CLIP':
       return {
         // expand in consideration of other states
         ...state,
